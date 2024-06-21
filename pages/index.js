@@ -5,9 +5,9 @@ export default function Home() {
 
   useEffect(() => {
     fetch('https://corsnextjs.vercel.app/api/date')
-      .then(response => response.json())
+      .then(response => response.text())
       .then(data => {
-        setDate(data.date);
+        setDate(data);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
